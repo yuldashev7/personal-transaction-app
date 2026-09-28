@@ -33,7 +33,6 @@ export function getTransactionSavedMessage(type: TransactionType): string {
   return SAVED_MESSAGES[type];
 }
 
-/** "Oziq-ovqat + Suv" for expense/income, "TBC → Naqd" for transfers. */
 export function getTransactionTitle(item: TransactionListItem): string {
   if (item.type === 'transfer') {
     return `${item.account.name} → ${item.toAccount?.name ?? '—'}`;
@@ -41,7 +40,6 @@ export function getTransactionTitle(item: TransactionListItem): string {
   return item.categories.map((category) => category.name).join(' + ') || 'Kategoriyasiz';
 }
 
-/** "Bugun · Uzum · tushlik"; transfers already name their accounts in the title. */
 export function getTransactionSubtitle(item: TransactionListItem, now: number): string {
   const parts = [formatDayLabel(item.occurredAt, now)];
   if (item.type !== 'transfer') parts.push(item.account.name);

@@ -7,7 +7,6 @@ import { useToast } from '@/shared/ui/Toast';
 
 import { deleteTransaction, restoreTransaction } from './repository';
 
-/** Confirm → soft delete → toast with "Qaytarish" (restore). */
 export function useDeleteTransaction() {
   const showToast = useToast();
 

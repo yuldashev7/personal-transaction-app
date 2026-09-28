@@ -11,9 +11,8 @@ import type { BreakdownKind } from './types';
 /** Names and icons are shown next to the numbers, so renames refresh the screen too. */
 const STATS_TABLES = [transactions, transactionCategories, categories, accounts];
 
-export const CHART_MONTHS = 6;
+const CHART_MONTHS = 6;
 
-/** Everything the statistics screen shows for one month, read in one pass. */
 export function useMonthStatistics(monthStart: number, kind: BreakdownKind, now: number) {
   const db = getDatabase();
   return useLiveQuery(() => {

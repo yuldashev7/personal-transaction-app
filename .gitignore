@@ -45,3 +45,9 @@ example
 # files
 
 docs
+
+# AI assistant config
+.claude/
+.cursor/
+CLAUDE.md
+AGENTS.md

@@ -2,13 +2,13 @@ import { err, ok, type Result } from './result';
 
 export type CurrencyCode = 'UZS';
 
-export interface CurrencyConfig {
+interface CurrencyConfig {
   readonly code: CurrencyCode;
   /** Number of minor units digits (ISO 4217). Amounts are stored as `major * 10^scale`. */
   readonly scale: number;
 }
 
-export const CURRENCIES: Readonly<Record<CurrencyCode, CurrencyConfig>> = {
+const CURRENCIES: Readonly<Record<CurrencyCode, CurrencyConfig>> = {
   UZS: { code: 'UZS', scale: 2 },
 };
 

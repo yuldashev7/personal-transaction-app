@@ -28,7 +28,6 @@ export interface TransactionFormProps {
   /** Active accounts, plus archived ones that the edited transaction already uses. */
   readonly accounts: readonly Account[];
   readonly submitLabel: string;
-  /** Validates and saves (repository); the form only maps errors to messages. */
   readonly onSubmit: (input: TransactionInput) => Result<unknown, AppError>;
   readonly onSuccess: (type: TransactionType) => void;
   readonly autoFocus?: boolean;

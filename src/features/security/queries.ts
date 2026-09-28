@@ -13,7 +13,7 @@ export const SECURITY_SETTINGS = {
 
 export type SecuritySetting = (typeof SECURITY_SETTINGS)[keyof typeof SECURITY_SETTINGS];
 
-export function getSettingValue(db: Database, key: SecuritySetting): string | null {
+function getSettingValue(db: Database, key: SecuritySetting): string | null {
   const row = db
     .select({ value: settings.value })
     .from(settings)

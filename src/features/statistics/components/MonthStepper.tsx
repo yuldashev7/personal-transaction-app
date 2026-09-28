@@ -15,7 +15,6 @@ export interface MonthStepperProps {
   readonly onChange: (monthStart: number) => void;
 }
 
-/** "‹ Sentabr ›"; tapping the month returns to the current one. */
 export function MonthStepper({ value, max, onChange }: MonthStepperProps) {
   const colors = useTheme();
   const isCurrent = value >= max;

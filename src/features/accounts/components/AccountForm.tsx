@@ -22,14 +22,12 @@ import { CARD_NUMBER_MAX_DIGITS } from '../validation';
 
 const EMPTY_INPUT: AccountInput = { name: '', kind: 'card', initialBalance: '', cardNumber: '' };
 
-/** Digits plus a space after every group of four. */
 const CARD_NUMBER_MAX_LENGTH =
   CARD_NUMBER_MAX_DIGITS + Math.floor((CARD_NUMBER_MAX_DIGITS - 1) / 4);
 
 export interface AccountFormProps {
   readonly initialValues?: AccountInput;
   readonly submitLabel: string;
-  /** Validates and saves (repository); the form only maps errors to messages. */
   readonly onSubmit: (input: AccountInput) => Result<unknown, AppError>;
   readonly onSuccess: () => void;
   readonly autoFocus?: boolean;

@@ -3,7 +3,7 @@ import { openDatabaseSync, type SQLiteDatabase } from 'expo-sqlite';
 
 import * as schema from './schema';
 
-export const DATABASE_NAME = 'moneo.db';
+const DATABASE_NAME = 'moneo.db';
 
 export type Database = ExpoSQLiteDatabase<typeof schema>;
 export type DatabaseTransaction = Parameters<Parameters<Database['transaction']>[0]>[0];

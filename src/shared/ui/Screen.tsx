@@ -20,7 +20,6 @@ export interface ScreenProps extends PropsWithChildren {
    */
   readonly edges?: readonly Edge[];
   readonly contentStyle?: StyleProp<ViewStyle>;
-  /** Enables pull-to-refresh. */
   readonly refresh?: RefreshState;
 }
 

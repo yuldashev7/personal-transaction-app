@@ -10,7 +10,7 @@ import { fromDatabaseError } from './errors';
 import migrations from './migrations/migrations';
 import { seedDefaultCategories } from './seed';
 
-export const PRE_MIGRATION_BACKUP_NAME = 'moneo-pre-migration-backup.db';
+const PRE_MIGRATION_BACKUP_NAME = 'moneo-pre-migration-backup.db';
 
 const MIGRATIONS_TABLE = '__drizzle_migrations';
 

@@ -20,7 +20,6 @@ export interface MonthlyChartProps {
   readonly onSelect: (monthStart: number) => void;
 }
 
-/** Income (green) and expense (red) per month; tapping a month selects it. */
 export function MonthlyChart({ months, selected, onSelect }: MonthlyChartProps) {
   const colors = useTheme();
   const max = Math.max(0, ...months.flatMap((month) => [month.incomeMinor, month.expenseMinor]));

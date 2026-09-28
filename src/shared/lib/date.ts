@@ -137,7 +137,7 @@ export function formatMonthShort(timestamp: number): string {
   return MONTHS_UZ_SHORT[new Date(timestamp).getMonth()] ?? '';
 }
 
-export function isValidDate(date: Date): boolean {
+function isValidDate(date: Date): boolean {
   return !Number.isNaN(date.getTime());
 }
 

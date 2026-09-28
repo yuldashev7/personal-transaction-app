@@ -11,18 +11,12 @@ export type AppError =
   | { readonly kind: 'database'; readonly cause: unknown }
   | { readonly kind: 'unexpected'; readonly cause: unknown };
 
-export type AppErrorKind = AppError['kind'];
-
 export function validationError(fields: FieldErrors): AppError {
   return { kind: 'validation', fields };
 }
 
 export function notFoundError(entity: string, id: string): AppError {
   return { kind: 'not_found', entity, id };
-}
-
-export function unexpectedError(cause: unknown): AppError {
-  return { kind: 'unexpected', cause };
 }
 
 /**

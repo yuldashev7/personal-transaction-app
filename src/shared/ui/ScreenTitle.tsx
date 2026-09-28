@@ -10,7 +10,6 @@ export interface ScreenTitleProps {
   readonly headerRight?: ReactNode;
 }
 
-/** In-content large title for tab roots, which have no native header. */
 export function ScreenTitle({ title, headerRight }: ScreenTitleProps) {
   return (
     <View style={styles.row}>

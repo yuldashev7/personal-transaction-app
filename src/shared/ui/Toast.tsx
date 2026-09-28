@@ -12,9 +12,8 @@ import { Icon } from './Icon';
 import { Surface } from './Surface';
 import { Text } from './Text';
 
-export interface ToastOptions {
+interface ToastOptions {
   readonly message: string;
-  /** `error` shows a muted red toast; everything else uses the neutral glass style. */
   readonly tone?: 'default' | 'error';
   readonly action?: { readonly label: string; readonly onPress: () => void };
   readonly durationMs?: number;

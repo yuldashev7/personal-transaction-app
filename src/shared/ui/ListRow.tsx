@@ -21,7 +21,6 @@ export interface ListRowProps {
   readonly subtitle?: string;
   readonly icon?: IconName;
   readonly iconColor?: ColorToken;
-  /** Right side content, e.g. an `AmountText`. */
   readonly trailing?: ReactNode;
   readonly showChevron?: boolean;
   readonly onPress?: () => void;

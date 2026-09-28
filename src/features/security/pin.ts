@@ -53,7 +53,7 @@ export function parsePinAttempts(raw: string | null): PinAttempts {
       return { failures: value.failures, lockedUntil: value.lockedUntil };
     }
   } catch {
-    // Fall through to the default.
+    // Corrupt entries reset the attempt counter.
   }
   return NO_PIN_ATTEMPTS;
 }

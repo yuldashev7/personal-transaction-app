@@ -10,7 +10,7 @@ import { runInDatabase } from './errors';
 const refreshListeners = new Set<() => void>();
 
 /** Re-runs every mounted live query (pull-to-refresh), e.g. to pick up a new day or month. */
-export function refreshLiveQueries(): void {
+function refreshLiveQueries(): void {
   refreshListeners.forEach((listener) => listener());
 }
 
@@ -87,7 +87,6 @@ export function useLiveQuery<T>(query: () => T, tables: readonly Table[]): Resul
   'use no memo';
   const version = useTableVersion(tables);
 
-  // `version` is the change signal; `query` identity changes with its inputs.
   return useMemo(() => {
     void version;
     return runInDatabase(() => ok(query()));

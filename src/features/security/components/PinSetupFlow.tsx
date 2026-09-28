@@ -10,7 +10,6 @@ interface PinSetupFlowProps {
   readonly onDone: (pin: string) => Promise<boolean>;
 }
 
-/** New PIN → repeat it; a mismatch starts over. */
 export function PinSetupFlow({ title = 'Yangi PIN kiriting', onDone }: PinSetupFlowProps) {
   const [firstPin, setFirstPin] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);

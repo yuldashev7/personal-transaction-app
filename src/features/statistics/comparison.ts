@@ -68,7 +68,6 @@ export function formatChange(change: Change): string {
   }
 }
 
-/** "Avgustning 1–28-kunlari bilan" or "Avgust oyi bilan". */
 export function formatComparisonPeriod(period: ComparisonPeriod, now: number): string {
   const month = formatMonthLabel(period.previousMonthStart, now);
   return period.throughDay === null
