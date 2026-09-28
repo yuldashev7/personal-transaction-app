@@ -1,0 +1,1 @@
+ALTER TABLE `accounts` ADD `card_number` text;
