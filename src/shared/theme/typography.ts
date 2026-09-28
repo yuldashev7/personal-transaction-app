@@ -20,7 +20,7 @@ export const FONT_SOURCES = {
 };
 
 export const Typography = {
-  display: { fontFamily: FontFamily.bold, fontSize: 34, lineHeight: 41, letterSpacing: -0.4 },
+  display: { fontFamily: FontFamily.bold, fontSize: 30, lineHeight: 41, letterSpacing: -0.4 },
   title: { fontFamily: FontFamily.bold, fontSize: 24, lineHeight: 30 },
   headline: { fontFamily: FontFamily.medium, fontSize: 18, lineHeight: 24 },
   body: { fontFamily: FontFamily.regular, fontSize: 16, lineHeight: 22 },
